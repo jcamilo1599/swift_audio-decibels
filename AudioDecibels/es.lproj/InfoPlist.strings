@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  AudioDecibels
+
+  Created by Juan Camilo Marín Ochoa on 8/06/24.
+  
+*/
+
+"CFBundleDisplayName" = "Medidor de Decibelios";

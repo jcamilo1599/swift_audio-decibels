@@ -15,6 +15,7 @@
 		0DFDF6DC2C147548005B0A21 /* DecibelMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDF6DB2C147548005B0A21 /* DecibelMeterView.swift */; };
 		0DFDF6E02C14829D005B0A21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6DF2C14829D005B0A21 /* README.md */; };
 		0DFDF6E22C1482A6005B0A21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E12C1482A6005B0A21 /* README.md */; };
+		0DFDF6E52C14837A005B0A21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		0DFDF6DB2C147548005B0A21 /* DecibelMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelMeterView.swift; sourceTree = "<group>"; };
 		0DFDF6DF2C14829D005B0A21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		0DFDF6E12C1482A6005B0A21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		0DFDF6E42C14837A005B0A21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0DFDF6E62C148388005B0A21 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 				0D5A03E82C1036D70087DD4D /* ContentView.swift */,
 				0DFDF6DB2C147548005B0A21 /* DecibelMeterView.swift */,
 				0D5A03EA2C1036D80087DD4D /* Assets.xcassets */,
+				0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */,
 				0D5A03F42C1036FA0087DD4D /* Info.plist */,
 				0DFDF6E12C1482A6005B0A21 /* README.md */,
 				0D5A03EC2C1036D80087DD4D /* Preview Content */,
@@ -123,6 +127,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 0D5A03DA2C1036D70087DD4D;
 			productRefGroup = 0D5A03E42C1036D70087DD4D /* Products */;
@@ -143,6 +148,7 @@
 				0D5A03EE2C1036D80087DD4D /* Preview Assets.xcassets in Resources */,
 				0DFDF6E22C1482A6005B0A21 /* README.md in Resources */,
 				0D5A03EB2C1036D80087DD4D /* Assets.xcassets in Resources */,
+				0DFDF6E52C14837A005B0A21 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,12 +168,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DFDF6E42C14837A005B0A21 /* en */,
+				0DFDF6E62C148388005B0A21 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		0D5A03EF2C1036D80087DD4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -231,6 +250,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
