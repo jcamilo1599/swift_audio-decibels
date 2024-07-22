@@ -43,7 +43,25 @@ class AudioManager: ObservableObject {
     
     // Configuración del grabador de audio
     private func setupRecorder() {
-#if os(iOS)
+#if os(macOS)
+        // Configuración del grabador de audio para macOS
+        let settings: [String: Any] = [
+            AVFormatIDKey: Int(kAudioFormatAppleLossless), // Formato de audio
+            AVSampleRateKey: 44100.0, // Tasa de muestreo
+            AVNumberOfChannelsKey: 1, // Número de canales
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue // Calidad de audio
+        ]
+        
+        // URL del archivo de grabación (en este caso, un archivo temporal)
+        let url = URL(fileURLWithPath: "/dev/null")
+        do {
+            audioRecorder = try AVAudioRecorder(url: url, settings: settings)
+            audioRecorder?.isMeteringEnabled = true // Habilitar medición de niveles de audio
+            audioRecorder?.prepareToRecord()
+        } catch {
+            print("Error setting up audio recorder: \(error.localizedDescription)")
+        }
+#else
         let audioSession = AVAudioSession.sharedInstance()
         do {
             // Configurar la sesión de audio para grabar y reproducir
@@ -60,24 +78,6 @@ class AudioManager: ObservableObject {
             
             // URL del archivo de grabación (en este caso, un archivo temporal)
             let url = URL(fileURLWithPath: "/dev/null")
-            audioRecorder = try AVAudioRecorder(url: url, settings: settings)
-            audioRecorder?.isMeteringEnabled = true // Habilitar medición de niveles de audio
-            audioRecorder?.prepareToRecord()
-        } catch {
-            print("Error setting up audio recorder: \(error.localizedDescription)")
-        }
-#elseif os(macOS)
-        // Configuración del grabador de audio para macOS
-        let settings: [String: Any] = [
-            AVFormatIDKey: Int(kAudioFormatAppleLossless), // Formato de audio
-            AVSampleRateKey: 44100.0, // Tasa de muestreo
-            AVNumberOfChannelsKey: 1, // Número de canales
-            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue // Calidad de audio
-        ]
-        
-        // URL del archivo de grabación (en este caso, un archivo temporal)
-        let url = URL(fileURLWithPath: "/dev/null")
-        do {
             audioRecorder = try AVAudioRecorder(url: url, settings: settings)
             audioRecorder?.isMeteringEnabled = true // Habilitar medición de niveles de audio
             audioRecorder?.prepareToRecord()
