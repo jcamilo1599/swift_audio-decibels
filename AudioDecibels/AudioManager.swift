@@ -78,6 +78,11 @@ class AudioManager: ObservableObject {
             // Convertir el valor de potencia promedio a una escala de 0 a 120 dB
             decibels = (scaledPower - minDecibels) / (maxDecibels - minDecibels) * 120
             
+            // Filtrado de valores anómalos
+            if decibels < 0 {
+                decibels = 0
+            }
+            
             // Almacenar el valor de decibeles y calcular el promedio
             decibelValues.append(decibels)
             avgDecibels = decibelValues.reduce(0, +) / Float(decibelValues.count)

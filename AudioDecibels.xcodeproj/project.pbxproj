@@ -16,6 +16,7 @@
 		0DFDF6E02C14829D005B0A21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6DF2C14829D005B0A21 /* README.md */; };
 		0DFDF6E22C1482A6005B0A21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E12C1482A6005B0A21 /* README.md */; };
 		0DFDF6E52C14837A005B0A21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */; };
+		CFA937F32C4DE67E0049FD74 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CFA937F22C4DE67E0049FD74 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0DFDF6E12C1482A6005B0A21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		0DFDF6E42C14837A005B0A21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DFDF6E62C148388005B0A21 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CFA937F22C4DE67E0049FD74 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				0D5A03E52C1036D70087DD4D /* AudioDecibels */,
+				CFA937F22C4DE67E0049FD74 /* .gitignore */,
 				0D5A03E42C1036D70087DD4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				0D5A03EE2C1036D80087DD4D /* Preview Assets.xcassets in Resources */,
 				0DFDF6E22C1482A6005B0A21 /* README.md in Resources */,
 				0D5A03EB2C1036D80087DD4D /* Assets.xcassets in Resources */,
+				CFA937F32C4DE67E0049FD74 /* .gitignore in Resources */,
 				0DFDF6E52C14837A005B0A21 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibels/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
@@ -325,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -340,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibels/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
@@ -357,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
