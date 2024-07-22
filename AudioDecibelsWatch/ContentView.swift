@@ -30,9 +30,6 @@ struct ContentView: View {
                             Image(systemName: "play.circle")
                                 .font(.title)
                                 .foregroundColor(.green)
-                                .padding(.bottom, 3)
-                            
-                            Text("Iniciar")
                         }
                     }
                     
@@ -43,9 +40,6 @@ struct ContentView: View {
                             Image(systemName: "stop.circle")
                                 .font(.title)
                                 .foregroundColor(.red)
-                                .padding(.bottom, 3)
-                            
-                            Text("Detener")
                         }
                     }
                 }
@@ -76,7 +70,7 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                .navigationTitle("Monitor de Decibeles")
+                .navigationTitle("Monitor de Decibelios")
             }
         }
     }

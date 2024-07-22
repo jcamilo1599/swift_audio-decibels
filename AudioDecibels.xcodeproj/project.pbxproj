@@ -20,9 +20,18 @@
 		CF3756422C4E04B4001EACCD /* AudioDecibelsWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37563D2C4E04B4001EACCD /* AudioDecibelsWatchApp.swift */; };
 		CF3756432C4E04B4001EACCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37563E2C4E04B4001EACCD /* ContentView.swift */; };
 		CF3756452C4E0686001EACCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A03EA2C1036D80087DD4D /* Assets.xcassets */; };
-		CF721E352C4E0CF100DF1D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */; };
 		CF721E372C4E0D2400DF1D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF721E362C4E0D2400DF1D2F /* Assets.xcassets */; };
 		CF721E382C4E0D2400DF1D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF721E362C4E0D2400DF1D2F /* Assets.xcassets */; };
+		CF721E442C4E15F200DF1D2F /* AudioDecibelsMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF721E432C4E15F200DF1D2F /* AudioDecibelsMacApp.swift */; };
+		CF721E462C4E15F200DF1D2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF721E452C4E15F200DF1D2F /* ContentView.swift */; };
+		CF721E482C4E15F300DF1D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF721E472C4E15F300DF1D2F /* Assets.xcassets */; };
+		CF721E4B2C4E15F300DF1D2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF721E4A2C4E15F300DF1D2F /* Preview Assets.xcassets */; };
+		CF721E502C4E172B00DF1D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */; };
+		CF721E512C4E172C00DF1D2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */; };
+		CF721E522C4E173900DF1D2F /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A03F52C1037960087DD4D /* AudioManager.swift */; };
+		CF721E532C4E173B00DF1D2F /* DecibelMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDF6DB2C147548005B0A21 /* DecibelMeterView.swift */; };
+		CF721E542C4E18BE00DF1D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF721E362C4E0D2400DF1D2F /* Assets.xcassets */; };
+		CF721E562C4E192400DF1D2F /* WindowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF721E552C4E192400DF1D2F /* WindowModifier.swift */; };
 		CF7958F32C4E040F002D3548 /* AudioDecibelsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CF7958E62C4E040E002D3548 /* AudioDecibelsWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CF7958F82C4E0417002D3548 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A03F52C1037960087DD4D /* AudioManager.swift */; };
 		CFA937F32C4DE67E0049FD74 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CFA937F22C4DE67E0049FD74 /* .gitignore */; };
@@ -70,12 +79,26 @@
 		CF37563E2C4E04B4001EACCD /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF721E342C4E0CAC00DF1D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF721E362C4E0D2400DF1D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDecibelsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF721E432C4E15F200DF1D2F /* AudioDecibelsMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDecibelsMacApp.swift; sourceTree = "<group>"; };
+		CF721E452C4E15F200DF1D2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF721E472C4E15F300DF1D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF721E4A2C4E15F300DF1D2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF721E4C2C4E15F300DF1D2F /* AudioDecibelsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioDecibelsMac.entitlements; sourceTree = "<group>"; };
+		CF721E552C4E192400DF1D2F /* WindowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowModifier.swift; sourceTree = "<group>"; };
 		CF7958E62C4E040E002D3548 /* AudioDecibelsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDecibelsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA937F22C4DE67E0049FD74 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0D5A03E02C1036D70087DD4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF721E3E2C4E15F200DF1D2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,6 +121,7 @@
 				CF721E392C4E0D4000DF1D2F /* AudioDecibelsMultiple */,
 				0D5A03E52C1036D70087DD4D /* AudioDecibels */,
 				CF37563F2C4E04B4001EACCD /* AudioDecibelsWatch */,
+				CF721E422C4E15F200DF1D2F /* AudioDecibelsMac */,
 				CF721E362C4E0D2400DF1D2F /* Assets.xcassets */,
 				0DFDF6E32C14837A005B0A21 /* InfoPlist.strings */,
 				0DFDF6E12C1482A6005B0A21 /* README.md */,
@@ -111,6 +135,7 @@
 			children = (
 				0D5A03E32C1036D70087DD4D /* AudioDecibels.app */,
 				CF7958E62C4E040E002D3548 /* AudioDecibelsWatch.app */,
+				CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +189,27 @@
 			path = AudioDecibelsMultiple;
 			sourceTree = "<group>";
 		};
+		CF721E422C4E15F200DF1D2F /* AudioDecibelsMac */ = {
+			isa = PBXGroup;
+			children = (
+				CF721E432C4E15F200DF1D2F /* AudioDecibelsMacApp.swift */,
+				CF721E452C4E15F200DF1D2F /* ContentView.swift */,
+				CF721E552C4E192400DF1D2F /* WindowModifier.swift */,
+				CF721E472C4E15F300DF1D2F /* Assets.xcassets */,
+				CF721E4C2C4E15F300DF1D2F /* AudioDecibelsMac.entitlements */,
+				CF721E492C4E15F300DF1D2F /* Preview Content */,
+			);
+			path = AudioDecibelsMac;
+			sourceTree = "<group>";
+		};
+		CF721E492C4E15F300DF1D2F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF721E4A2C4E15F300DF1D2F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,6 +230,23 @@
 			name = AudioDecibels;
 			productName = AudioDecibels;
 			productReference = 0D5A03E32C1036D70087DD4D /* AudioDecibels.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF721E402C4E15F200DF1D2F /* AudioDecibelsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF721E4D2C4E15F300DF1D2F /* Build configuration list for PBXNativeTarget "AudioDecibelsMac" */;
+			buildPhases = (
+				CF721E3D2C4E15F200DF1D2F /* Sources */,
+				CF721E3E2C4E15F200DF1D2F /* Frameworks */,
+				CF721E3F2C4E15F200DF1D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioDecibelsMac;
+			productName = AudioDecibelsMac;
+			productReference = CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CF7958E52C4E040E002D3548 /* AudioDecibelsWatch */ = {
@@ -216,6 +279,9 @@
 					0D5A03E22C1036D70087DD4D = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					CF721E402C4E15F200DF1D2F = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					CF7958E52C4E040E002D3548 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -237,6 +303,7 @@
 			targets = (
 				0D5A03E22C1036D70087DD4D /* AudioDecibels */,
 				CF7958E52C4E040E002D3548 /* AudioDecibelsWatch */,
+				CF721E402C4E15F200DF1D2F /* AudioDecibelsMac */,
 			);
 		};
 /* End PBXProject section */
@@ -255,15 +322,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF721E3F2C4E15F200DF1D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF721E4B2C4E15F300DF1D2F /* Preview Assets.xcassets in Resources */,
+				CF721E512C4E172C00DF1D2F /* InfoPlist.strings in Resources */,
+				CF721E542C4E18BE00DF1D2F /* Assets.xcassets in Resources */,
+				CF721E482C4E15F300DF1D2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF7958E42C4E040E002D3548 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CF3756412C4E04B4001EACCD /* Assets.xcassets in Resources */,
-				CF721E352C4E0CF100DF1D2F /* InfoPlist.strings in Resources */,
 				CF3756452C4E0686001EACCD /* Assets.xcassets in Resources */,
 				CF3756402C4E04B4001EACCD /* Preview Assets.xcassets in Resources */,
 				CF721E382C4E0D2400DF1D2F /* Assets.xcassets in Resources */,
+				CF721E502C4E172B00DF1D2F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +356,18 @@
 				0DFDF6DC2C147548005B0A21 /* DecibelMeterView.swift in Sources */,
 				0D5A03E92C1036D70087DD4D /* ContentView.swift in Sources */,
 				0D5A03E72C1036D70087DD4D /* AudioDecibelsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF721E3D2C4E15F200DF1D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF721E522C4E173900DF1D2F /* AudioManager.swift in Sources */,
+				CF721E532C4E173B00DF1D2F /* DecibelMeterView.swift in Sources */,
+				CF721E562C4E192400DF1D2F /* WindowModifier.swift in Sources */,
+				CF721E462C4E15F200DF1D2F /* ContentView.swift in Sources */,
+				CF721E442C4E15F200DF1D2F /* AudioDecibelsMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +591,66 @@
 			};
 			name = Release;
 		};
+		CF721E4E2C4E15F300DF1D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AudioDecibelsMac/AudioDecibelsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Z29G67Z5G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juan.AudioDecibelsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CF721E4F2C4E15F300DF1D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AudioDecibelsMac/AudioDecibelsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Z29G67Z5G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juan.AudioDecibelsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		CF7958F52C4E040F002D3548 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -514,13 +664,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioDecibelsWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AudioDecibelsWatch;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.faacil.AudioDecibels;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -545,13 +696,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioDecibelsWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AudioDecibelsWatch;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.faacil.AudioDecibels;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -580,6 +732,15 @@
 			buildConfigurations = (
 				0D5A03F22C1036D80087DD4D /* Debug */,
 				0D5A03F32C1036D80087DD4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF721E4D2C4E15F300DF1D2F /* Build configuration list for PBXNativeTarget "AudioDecibelsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF721E4E2C4E15F300DF1D2F /* Debug */,
+				CF721E4F2C4E15F300DF1D2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

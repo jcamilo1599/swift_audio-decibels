@@ -21,11 +21,29 @@ class AudioManager: ObservableObject {
     
     // Inicializador que configura el grabador de audio
     init() {
+        requestMicrophoneAccess()
+    }
+    
+    // Solicitar acceso al micrófono
+    private func requestMicrophoneAccess() {
+#if os(macOS)
+        AVCaptureDevice.requestAccess(for: .audio) { granted in
+            DispatchQueue.main.async {
+                if granted {
+                    self.setupRecorder()
+                } else {
+                    print("El acceso al micrófono fue denegado.")
+                }
+            }
+        }
+#else
         setupRecorder()
+#endif
     }
     
     // Configuración del grabador de audio
     private func setupRecorder() {
+#if os(iOS)
         let audioSession = AVAudioSession.sharedInstance()
         do {
             // Configurar la sesión de audio para grabar y reproducir
@@ -48,10 +66,33 @@ class AudioManager: ObservableObject {
         } catch {
             print("Error setting up audio recorder: \(error.localizedDescription)")
         }
+#elseif os(macOS)
+        // Configuración del grabador de audio para macOS
+        let settings: [String: Any] = [
+            AVFormatIDKey: Int(kAudioFormatAppleLossless), // Formato de audio
+            AVSampleRateKey: 44100.0, // Tasa de muestreo
+            AVNumberOfChannelsKey: 1, // Número de canales
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue // Calidad de audio
+        ]
+        
+        // URL del archivo de grabación (en este caso, un archivo temporal)
+        let url = URL(fileURLWithPath: "/dev/null")
+        do {
+            audioRecorder = try AVAudioRecorder(url: url, settings: settings)
+            audioRecorder?.isMeteringEnabled = true // Habilitar medición de niveles de audio
+            audioRecorder?.prepareToRecord()
+        } catch {
+            print("Error setting up audio recorder: \(error.localizedDescription)")
+        }
+#endif
     }
     
     // Inicia el monitoreo de audio
     func startMonitoring() {
+#if os(macOS)
+        requestMicrophoneAccess()
+#endif
+        
         audioRecorder?.record()
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             self.updateDecibels()
@@ -79,7 +120,7 @@ class AudioManager: ObservableObject {
             decibels = (scaledPower - minDecibels) / (maxDecibels - minDecibels) * 120
             
             // Filtrado de valores anómalos
-            if decibels < 0 {
+            if (decibels < 0) {
                 decibels = 0
             }
             

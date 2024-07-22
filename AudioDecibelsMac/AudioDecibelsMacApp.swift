@@ -13,5 +13,10 @@ struct AudioDecibelsMacApp: App {
         WindowGroup {
             ContentView()
         }
+        .commands {
+            CommandGroup(replacing: .appSettings) {
+                EmptyView()
+            }
+        }
     }
 }

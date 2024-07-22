@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
-                Text("Monitor de Decibeles")
+                Text("Monitor de Decibelios")
                     .font(.title)
                     .padding()
                 
@@ -21,7 +21,9 @@ struct ContentView: View {
                     .frame(width: 50, height: 300)
                     .padding()
                 
-                Text(description(for: audioManager.decibels))
+                if audioManager.decibels > 0 {
+                    Text(description(for: audioManager.decibels))
+                }
                 
                 Text("\(audioManager.decibels, specifier: "%.1f") dB")
                     .font(.title)
