@@ -67,7 +67,7 @@
 		0D5A03E82C1036D70087DD4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D5A03EA2C1036D80087DD4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D5A03ED2C1036D80087DD4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0D5A03F42C1036FA0087DD4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0D5A03F42C1036FA0087DD4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5A03F52C1037960087DD4D /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		0DFDF6DB2C147548005B0A21 /* DecibelMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelMeterView.swift; sourceTree = "<group>"; };
 		0DFDF6E12C1482A6005B0A21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -88,6 +88,7 @@
 		CF721E552C4E192400DF1D2F /* WindowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowModifier.swift; sourceTree = "<group>"; };
 		CF7958E62C4E040E002D3548 /* AudioDecibelsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDecibelsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA937F22C4DE67E0049FD74 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CFB251482C61F84C00EFB1AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +196,7 @@
 				CF721E432C4E15F200DF1D2F /* AudioDecibelsMacApp.swift */,
 				CF721E452C4E15F200DF1D2F /* ContentView.swift */,
 				CF721E552C4E192400DF1D2F /* WindowModifier.swift */,
+				CFB251482C61F84C00EFB1AD /* Info.plist */,
 				CF721E472C4E15F300DF1D2F /* Assets.xcassets */,
 				CF721E4C2C4E15F300DF1D2F /* AudioDecibelsMac.entitlements */,
 				CF721E492C4E15F300DF1D2F /* Preview Content */,
@@ -532,7 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibels/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
@@ -565,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibels/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
@@ -600,12 +602,13 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioDecibelsMac/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
@@ -632,12 +635,13 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioDecibelsMac/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
@@ -661,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsWatch/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
@@ -693,7 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsWatch/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_PREVIEWS = YES;
