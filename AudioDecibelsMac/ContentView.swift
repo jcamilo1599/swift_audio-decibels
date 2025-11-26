@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var audioManager = AudioManager()
+    @State private var showMicDeniedAlert = false
     
     var body: some View {
         ScrollView {
@@ -91,6 +92,20 @@ struct ContentView: View {
             .padding()
         }
         .windowConstraints()
+        .onChange(of: audioManager.micDenied) { _, newValue in
+            // Cuando el permiso está denegado, mostramos una alerta para guiar al usuario
+            if newValue {
+                showMicDeniedAlert = true
+            }
+        }
+        .alert("Acceso al micrófono denegado", isPresented: $showMicDeniedAlert) {
+            Button("Abrir Ajustes de Privacidad") {
+                audioManager.openMicrophonePrivacyPane()
+            }
+            Button("Cancelar", role: .cancel) { }
+        } message: {
+            Text("Ve a Ajustes del Sistema > Privacidad y seguridad > Micrófono y permite el acceso para esta app.")
+        }
     }
     
     private func description(for decibels: Float) -> String {
@@ -155,3 +170,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

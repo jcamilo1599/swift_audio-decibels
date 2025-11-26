@@ -7,6 +7,9 @@
 
 import AVFoundation
 import Combine
+#if os(macOS)
+import AppKit
+#endif
 
 // Clase para manejar el audio y calcular los niveles de decibeles
 class AudioManager: ObservableObject {
@@ -19,25 +22,49 @@ class AudioManager: ObservableObject {
     @Published var minimum: Float?
     @Published var maximum: Float?
     
-    // Inicializador que configura el grabador de audio
+    // Estado de permisos para que la UI pueda reaccionar
+    @Published var micAuthorized: Bool = false
+    @Published var micDenied: Bool = false
+    
+    // Inicializador que verifica/solicita acceso al micrófono
     init() {
-        requestMicrophoneAccess()
+        checkAndRequestMicrophoneAccessIfNeeded()
     }
     
-    // Solicitar acceso al micrófono
-    private func requestMicrophoneAccess() {
+    // Verifica el estado y, si hace falta, solicita acceso al micrófono
+    private func checkAndRequestMicrophoneAccessIfNeeded() {
 #if os(macOS)
-        AVCaptureDevice.requestAccess(for: .audio) { granted in
-            DispatchQueue.main.async {
-                if granted {
-                    self.setupRecorder()
-                } else {
-                    print("El acceso al micrófono fue denegado.")
+        let status = AVCaptureDevice.authorizationStatus(for: .audio)
+        switch status {
+        case .authorized:
+            micAuthorized = true
+            micDenied = false
+            setupRecorder()
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .audio) { granted in
+                DispatchQueue.main.async {
+                    self.micAuthorized = granted
+                    self.micDenied = !granted
+                    if granted {
+                        self.setupRecorder()
+                    } else {
+                        print("El acceso al micrófono fue denegado.")
+                    }
                 }
             }
+        case .denied, .restricted:
+            micAuthorized = false
+            micDenied = true
+            print("El acceso al micrófono fue denegado o restringido.")
+        @unknown default:
+            micAuthorized = false
+            micDenied = true
+            print("Estado de autorización desconocido para el micrófono.")
         }
 #else
         setupRecorder()
+        micAuthorized = true
+        micDenied = false
 #endif
     }
     
@@ -90,10 +117,20 @@ class AudioManager: ObservableObject {
     // Inicia el monitoreo de audio
     func startMonitoring() {
 #if os(macOS)
-        requestMicrophoneAccess()
+        // No volver a pedir permiso aquí; usar el estado ya conocido
+        guard micAuthorized else {
+            // Si está denegado, informar (la UI puede ofrecer abrir Ajustes)
+            if micDenied {
+                print("Permiso de micrófono denegado. Abre Ajustes del Sistema > Privacidad y seguridad > Micrófono.")
+            } else {
+                // Si aún no se determinó, intenta solicitarlo
+                checkAndRequestMicrophoneAccessIfNeeded()
+            }
+            return
+        }
 #endif
-        
         audioRecorder?.record()
+        timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             self.updateDecibels()
         }
@@ -120,7 +157,7 @@ class AudioManager: ObservableObject {
             decibels = (scaledPower - minDecibels) / (maxDecibels - minDecibels) * 120
             
             // Filtrado de valores anómalos
-            if (decibels < 0) {
+            if decibels < 0 {
                 decibels = 0
             }
             
@@ -139,4 +176,14 @@ class AudioManager: ObservableObject {
             }
         }
     }
+    
+#if os(macOS)
+    // Abre la sección de Privacidad del micrófono en Ajustes del Sistema
+    func openMicrophonePrivacyPane() {
+        if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Microphone") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+#endif
 }
+
