@@ -6,4 +6,5 @@
   
 */
 
-"CFBundleDisplayName" = "Decibel Meter";
+"CFBundleDisplayName" = "Sound Level Meter";
+"CFBundleName" = "Sound Level Meter";

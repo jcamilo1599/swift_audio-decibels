@@ -6,4 +6,5 @@
   
 */
 
-"CFBundleDisplayName" = "Medidor de Decibelios";
+"CFBundleDisplayName" = "Monitor de Decibelios";
+"CFBundleName" = "Monitor de Decibelios";
