@@ -79,7 +79,7 @@
 		CF37563E2C4E04B4001EACCD /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF721E342C4E0CAC00DF1D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF721E362C4E0D2400DF1D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDecibelsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF721E412C4E15F200DF1D2F /* Audio Decibels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Decibels.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF721E432C4E15F200DF1D2F /* AudioDecibelsMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDecibelsMacApp.swift; sourceTree = "<group>"; };
 		CF721E452C4E15F200DF1D2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF721E472C4E15F300DF1D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			children = (
 				0D5A03E32C1036D70087DD4D /* AudioDecibels.app */,
 				CF7958E62C4E040E002D3548 /* AudioDecibelsWatch.app */,
-				CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */,
+				CF721E412C4E15F200DF1D2F /* Audio Decibels.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			);
 			name = AudioDecibelsMac;
 			productName = AudioDecibelsMac;
-			productReference = CF721E412C4E15F200DF1D2F /* AudioDecibelsMac.app */;
+			productReference = CF721E412C4E15F200DF1D2F /* Audio Decibels.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CF7958E52C4E040E002D3548 /* AudioDecibelsWatch */ = {
@@ -603,7 +603,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -612,7 +612,7 @@
 				INFOPLIST_FILE = AudioDecibelsMac/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de decibelios en tu entorno.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -620,7 +620,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Audio Decibels";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,7 +637,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDecibelsMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z29G67Z5G;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -646,7 +646,7 @@
 				INFOPLIST_FILE = AudioDecibelsMac/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de sonido";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos acceso al micrófono para medir los niveles de decibelios en tu entorno.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -654,7 +654,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.faacil.AudioDecibels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Audio Decibels";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
